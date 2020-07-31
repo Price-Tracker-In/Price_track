@@ -37,7 +37,7 @@ class Front_End_Form(FlaskForm):
 def form():
     form= Front_End_Form()
     if form.validate_on_submit():
-        s.insertdata(s.records.count(),str(form.Emailsection.data),str(shortit(form.Product_name.data)),int(form.Your_Price.data))
+        s.insertdata(str(form.Emailsection.data),str(shortit(form.Product_name.data)),int(form.Your_Price.data))
         return render_template('main2.html', form=form)
     return render_template('main.html', form=form)
 
