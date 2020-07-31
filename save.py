@@ -23,7 +23,7 @@ records = db.data
 
 
 #Save data to db
-def insertdata(i,email,link,reduce_price):
-    data = {'_id':i,'email':email,'link':link,'reduce_price':reduce_price}
+def insertdata(email,link,reduce_price):
+    data = {'email':email,'link':link,'reduce_price':reduce_price}
     records.insert_one(data)
 
